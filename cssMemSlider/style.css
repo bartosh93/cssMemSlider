@@ -1,10 +1,13 @@
 body {
     background-color: #24292d;
+    display: flex;
+    align-items: center;
+    height: 100vh;
   }
   
   .slider {
     /* position: relative; */
-    width: 680px;
+    width: 60vw;
     margin: 50px auto;
     /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75); */
   }
@@ -56,8 +59,8 @@ body {
   }
   
   .slides img {
-    width: 680px;
-    height: 340px;
+    width: 60vw;
+    /* height: 340px; */
     float: left;
   }
   p {
@@ -91,11 +94,11 @@ body {
   }
   
   #btn2:checked~.slider-inner .slides {
-    transform: translate(-680px);
+    transform: translate(-60vw);
   }
   
   #btn3:checked~.slider-inner .slides {
-    transform: translate(-1360px);
+    transform: translate(-120vw);
   }
   
   #btn1:checked~.text-switch .qotes-wrapper .qotes {
