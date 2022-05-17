@@ -24,7 +24,6 @@ body {
   
 .switch {
   margin-right: -5px;
-  bottom: -40px;
   text-align: center;
   display: flex;
 }
@@ -81,12 +80,12 @@ body {
 .slides {
   width: 400%;
   transition: all 0.5s;
+  display: flex;
 }
   
 .slides img {
   width: calc(var(--main-width)*1);
   height: var(--main-height);
-  float: left;
   object-fit: contain;
 }
 
