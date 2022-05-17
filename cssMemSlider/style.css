@@ -69,6 +69,10 @@ body {
 .text-switch .switch label:hover span {
   border-color: #6cdddd;
 }
+
+.text-switch .switch label:active span {
+  box-shadow: 0 0 10px rgba(17, 150, 143, 0.7);
+}
   
 .slider-inner {
   overflow: hidden;
