@@ -1,0 +1,195 @@
+body {
+  background-color: #24292d;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 32px;
+}
+
+:root {
+  --main-width: 60vw;
+  --main-height:60vh;
+}
+
+.slider {
+  width: calc(var(--main-width)*1);
+  margin: 50px auto;
+  overflow: hidden;
+}
+  
+.slider input[name="switch"] {
+  display: none;
+}
+  
+.switch {
+  margin-right: -5px;
+  text-align: center;
+  display: flex;
+}
+  
+.switch label {
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.switch label span{
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 0.2em solid #2f363c;
+  background-color: #738290;
+  text-align: center;
+}
+ 
+#btn1:checked~ .text-switch .switch label[for="btn1"] span {
+  background-color: white;
+}
+  
+#btn2:checked~ .text-switch .switch label[for="btn2"] span {
+  background-color: white;
+}
+  
+#btn3:checked~ .text-switch .switch label[for="btn3"] span {
+  background-color: white;
+}
+
+#btn4:checked~ .text-switch .switch label[for="btn4"] span {
+  background-color: white;
+}
+
+.text-switch .switch label:hover span {
+  border-color: #6cdddd;
+}
+
+.text-switch .switch label:active span {
+  box-shadow: 0 0 10px rgba(17, 150, 143, 0.7);
+}
+  
+.slider-inner {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+  
+.slides {
+  width: 400%;
+  transition: all 0.5s;
+  display: flex;
+}
+  
+.slides img {
+  width: calc(var(--main-width)*1);
+  height: var(--main-height);
+  object-fit: contain;
+}
+
+p {
+    display: inline;
+}
+
+.qotes-wrapper{
+    overflow: hidden;
+    width: 50%;
+}
+
+.qotes {
+  width: 400%;
+  transition: all 0.7s;
+  display: flex;
+}
+
+.qotes p {
+  width: 100%;
+  transition: all 0.7s;
+  color: rgba(205, 214, 219, 0);  
+}
+  
+.text-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+
+#btn1:checked~.slider-inner .slides {
+  transform: translate(0);
+}
+#btn2:checked~.slider-inner .slides {
+  transform: translate( calc(var(--main-width)*-1));
+} 
+#btn3:checked~.slider-inner .slides {
+  transform: translate( calc(var(--main-width)*-2));
+}
+#btn4:checked~.slider-inner .slides {
+  transform: translate( calc(var(--main-width)*-3));
+}
+  
+
+#btn1:checked~.text-switch .qotes-wrapper .qotes {
+    transform: translate(0);
+}
+#btn2:checked~.text-switch .qotes-wrapper .qotes {
+    transform: translate(-25%); 
+}
+#btn3:checked~.text-switch .qotes-wrapper .qotes {
+    transform: translate(-50%);
+}
+#btn4:checked~.text-switch .qotes-wrapper .qotes {
+    transform: translate(-75%);
+}
+
+
+#btn1:checked~.text-switch .qotes-wrapper .qotes .first {
+  color: rgba(205, 214, 219, 1);  
+}
+#btn2:checked~.text-switch .qotes-wrapper .qotes .second {
+  color: rgba(205, 214, 219, 1);  
+}
+#btn3:checked~.text-switch .qotes-wrapper .qotes .third {
+  color: rgba(205, 214, 219, 1); 
+}
+#btn4:checked~.text-switch .qotes-wrapper .qotes .fourth {
+  color: rgba(205, 214, 219, 1);  
+}
+
+
+@media screen and (max-width:1200px) {
+  body{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  body {
+    font-size: 24px;
+  }
+
+  .text-switch {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+  }
+
+  :root {
+    --main-width: 90vw;
+  }
+
+  .qotes-wrapper {
+      align-self: flex-start;
+      width: 100%;
+  }
+
+  .slides img {
+    height: calc(var(--main-height)*0.8);
+  }
+}
